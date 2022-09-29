@@ -11,6 +11,14 @@ position: 0,0
 
 A VISUAL NOVEL EXAMPLE
 
+A VISUAL NOVEL EXAMPLE_00
+A VISUAL NOVEL EXAMPLE_01
+A VISUAL NOVEL EXAMPLE_02
+A VISUAL NOVEL EXAMPLE_03
+A VISUAL NOVEL EXAMPLE_04
+A VISUAL NOVEL EXAMPLE_05
+A VISUAL NOVEL EXAMPLE_06
+
 // adds actor named "Eve" using sprite "cool-girl", placed in left-half + center of screen, with green text label
 <<Act Eve cool-girl left center green>>
 
