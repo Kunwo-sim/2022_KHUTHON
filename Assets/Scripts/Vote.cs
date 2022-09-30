@@ -10,22 +10,45 @@ public class Vote : MonoBehaviour
     public GameObject VotePanel;
     public Slider Choice1Slider;
     public Slider Choice2Slider;
-    public TextMeshPro WinText;
-
+    public TextMeshProUGUI WinText;
 
     public int choice1Cnt = 0;
     public int choice2Cnt = 0;
     int cntSum = 0;
 
+    public void Start()
+    {
+        Setting();
+        Invoke("EndVote", 5.0f);
+    }
+
+    public void Update()
+    {
+        if (Input.GetKey(KeyCode.Q))
+        {
+            ChoiceIncrease(1);
+        }
+        else if (Input.GetKey(KeyCode.E))
+        {
+            ChoiceIncrease(2);
+        }
+    }
     public void Setting()
     {
         choice1Cnt = 0;
         choice2Cnt = 0;
         cntSum = 0;
     }
+
+    public void StartClientVote()
+    {
+
+    }
+
     public void StartVote()
     {
-        StartCoroutine(StartVoteEffect());
+        Setting();
+        StartCoroutine(Voting());
     }
 
     public void ClientVoteEnd(int winIndex)
@@ -60,7 +83,7 @@ public class Vote : MonoBehaviour
             WinText.text = "2번 선택지가 더 많은 표를 받았습니다!";
         }
 
-        WinText.GetComponent<GameObject>().SetActive(true);
+        WinText.gameObject.SetActive(true);
     }
 
     public void ChoiceIncrease(int choice)
@@ -79,14 +102,9 @@ public class Vote : MonoBehaviour
         Choice2Slider.value = choice2Cnt / (float)cntSum;
     }
 
-    IEnumerator StartVoteEffect()
+    IEnumerator Voting()
     {
-        // 3
-        yield return new WaitForSeconds(1.0f);
-        // 2
-        yield return new WaitForSeconds(1.0f);
-        // 1
-        yield return new WaitForSeconds(1.0f);
+        yield return new WaitForSeconds(5.0f);
 
         VotePanel.SetActive(true);
         yield return null;
