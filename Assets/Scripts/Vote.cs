@@ -2,13 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class Vote : MonoBehaviour
 {
+    public GameObject ClientVotePanel;
     public GameObject VotePanel;
     public Slider Choice1Slider;
     public Slider Choice2Slider;
-    public Text WinText;
+    public TextMeshPro WinText;
+
 
     public int choice1Cnt = 0;
     public int choice2Cnt = 0;
@@ -19,9 +22,20 @@ public class Vote : MonoBehaviour
         StartCoroutine(StartVoteEffect());
     }
 
-    public void ClientVoteEnd()
+    public void ClientVoteEnd(int winIndex)
     {
+        ClientVotePanel.SetActive(false);
 
+        if (winIndex == 1)
+        {
+            WinText.text = "1번 선택지가 더 많은 표를 받았습니다!";
+        }
+        else if (winIndex == 2)
+        {
+            WinText.text = "2번 선택지가 더 많은 표를 받았습니다!";
+        }
+
+        WinText.GetComponent<GameObject>().SetActive(true);
     }
 
     public void EndVote()
