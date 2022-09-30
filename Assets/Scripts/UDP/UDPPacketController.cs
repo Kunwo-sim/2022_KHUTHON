@@ -77,14 +77,6 @@ public class UDPPacketController : Singleton<UDPPacketController>
         receiver.OnProcessReceivedPacket += ProcessPacket;
     }
 
-    private void Update()
-    {
-        if (programType is ProgramType.Client)
-        {
-            SendEnterClientPacket();
-        }
-    }
-
     private UDPPacket GetPacketContainer()
     {
         UDPPacket newPacket;
@@ -317,11 +309,6 @@ public class UDPPacketController : Singleton<UDPPacketController>
         if (programType is ProgramType.Server)
         {
             return;
-        }
-
-        if (!string.Equals(CurrentTextID, textID))
-        {
-            ReceiveShowNextLinePacket();
         }
     }
 
