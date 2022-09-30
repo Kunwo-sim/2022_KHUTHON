@@ -178,6 +178,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114178998031062532, guid: 9e0841b82a4ebcd438730d23886e17e6, type: 3}
+      propertyPath: m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114178998031062532, guid: 9e0841b82a4ebcd438730d23886e17e6, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
     - target: {fileID: 224615983262082226, guid: 9e0841b82a4ebcd438730d23886e17e6, type: 3}
       propertyPath: m_SizeDelta.x
       value: 0
@@ -192,7 +200,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6167349947878513351, guid: 9e0841b82a4ebcd438730d23886e17e6, type: 3}
       propertyPath: loadSprites.Array.size
-      value: 14
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 6167349947878513351, guid: 9e0841b82a4ebcd438730d23886e17e6, type: 3}
       propertyPath: loadSprites.Array.data[8]
@@ -218,6 +226,26 @@ PrefabInstance:
       propertyPath: loadSprites.Array.data[13]
       value: 
       objectReference: {fileID: 21300000, guid: 0c5eecaea242b4bf3984be66dbb7435d, type: 3}
+    - target: {fileID: 6167349947878513351, guid: 9e0841b82a4ebcd438730d23886e17e6, type: 3}
+      propertyPath: loadSprites.Array.data[14]
+      value: 
+      objectReference: {fileID: 21300000, guid: d80e200406d2b344c8c5121b54404713, type: 3}
+    - target: {fileID: 6167349947878513351, guid: 9e0841b82a4ebcd438730d23886e17e6, type: 3}
+      propertyPath: loadSprites.Array.data[15]
+      value: 
+      objectReference: {fileID: 21300000, guid: dac0172d6a8b2e342b6b80921883c3fc, type: 3}
+    - target: {fileID: 6167349947878513351, guid: 9e0841b82a4ebcd438730d23886e17e6, type: 3}
+      propertyPath: loadSprites.Array.data[16]
+      value: 
+      objectReference: {fileID: 21300000, guid: 3239172abb9c36449ac8229f7cc19f96, type: 3}
+    - target: {fileID: 6167349947878513351, guid: 9e0841b82a4ebcd438730d23886e17e6, type: 3}
+      propertyPath: loadSprites.Array.data[17]
+      value: 
+      objectReference: {fileID: 21300000, guid: 3e1d836598045ed49a9920104222f8af, type: 3}
+    - target: {fileID: 6167349947878513351, guid: 9e0841b82a4ebcd438730d23886e17e6, type: 3}
+      propertyPath: loadSprites.Array.data[18]
+      value: 
+      objectReference: {fileID: 21300000, guid: 4f8ef48ee345e7e408f72c63f2c014fe, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9e0841b82a4ebcd438730d23886e17e6, type: 3}
 --- !u!1 &929377106
