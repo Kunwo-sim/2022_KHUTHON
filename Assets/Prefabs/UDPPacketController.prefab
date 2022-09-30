@@ -49,6 +49,8 @@ MonoBehaviour:
   programType: 0
   sender: {fileID: 3862614859684565291}
   receiver: {fileID: 3862614858800808423}
+  runner: {fileID: 0}
+  vote: {fileID: 0}
 --- !u!1 &3862614858800808421
 GameObject:
   m_ObjectHideFlags: 0

@@ -470,9 +470,24 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3862614858173195713, guid: cbe9c5371f77746649ec605e797e8ba2, type: 3}
+      propertyPath: runner
+      value: 
+      objectReference: {fileID: 1439565691}
     - target: {fileID: 3862614858173195719, guid: cbe9c5371f77746649ec605e797e8ba2, type: 3}
       propertyPath: m_Name
       value: UDPPacketController
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cbe9c5371f77746649ec605e797e8ba2, type: 3}
+--- !u!114 &1439565691 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2678071618908635071, guid: 9e0841b82a4ebcd438730d23886e17e6, type: 3}
+  m_PrefabInstance: {fileID: 484263810}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bec29c0a230741bdac901dba8da47ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

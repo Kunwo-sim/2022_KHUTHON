@@ -353,7 +353,7 @@ public class UDPPacketController : Singleton<UDPPacketController>
             return;
         }
 
-        runner.dialogueViews[0].GetComponent<LineView>().OnContinueClicked();
+        runner.dialogueViews[1].GetComponent<LineView>().OnContinueClicked();
     }
 
     /// <summary>클라이언트는 Title에 있을 때 게임 화면으로 이동</summary>
