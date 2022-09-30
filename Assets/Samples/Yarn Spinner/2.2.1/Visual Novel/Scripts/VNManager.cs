@@ -377,7 +377,7 @@ namespace Yarn.Unity.Example {
 
         public override void RunLine(LocalizedLine dialogueLine, System.Action onDialogueLineFinished)
         {
-			Debug.Log($"TextID : {dialogueLine.TextID}");
+			UDPPacketController.Instance.CurrentTextID = dialogueLine.TextID;
 
             var actorName = dialogueLine.CharacterName;
 

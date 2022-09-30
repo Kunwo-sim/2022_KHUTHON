@@ -3,6 +3,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UniRx;
 
+using Yarn.Unity;
+
 public enum UDPPacketType
 {
     Debug,  // 디버그용
@@ -50,7 +52,12 @@ public class UDPPacketController : Singleton<UDPPacketController>
     [SerializeField]
     private Receiver receiver;
 
+    [SerializeField]
+    private DialogueRunner runner;
+
     private Stack<UDPPacket> packetPool;
+
+    public string CurrentTextID { get; set; }
 
     private void Awake()
     {
@@ -292,6 +299,8 @@ public class UDPPacketController : Singleton<UDPPacketController>
         {
             return;
         }
+
+        SendInitPacket(runner.CurrentNodeName, CurrentTextID);
     }
 
     /// <summary>클라이언트는 서버가 보낸 Dialogue 정보로 Server 진행 상황과 동기화 진행</summary>
