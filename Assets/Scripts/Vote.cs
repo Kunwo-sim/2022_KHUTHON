@@ -17,6 +17,12 @@ public class Vote : MonoBehaviour
     public int choice2Cnt = 0;
     int cntSum = 0;
 
+    public void Setting()
+    {
+        choice1Cnt = 0;
+        choice2Cnt = 0;
+        cntSum = 0;
+    }
     public void StartVote()
     {
         StartCoroutine(StartVoteEffect());
