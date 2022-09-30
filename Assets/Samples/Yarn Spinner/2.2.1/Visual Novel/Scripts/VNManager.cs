@@ -389,6 +389,7 @@ namespace Yarn.Unity.Example {
                 nameplateBG.gameObject.SetActive(false);
             }
 
+			UDPPacketController.Instance.SendShowNextLinePacket();
             onDialogueLineFinished();
         }
 
