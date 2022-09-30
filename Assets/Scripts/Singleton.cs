@@ -56,7 +56,7 @@ public abstract class Singleton<T> : MonoBehaviour where T : MonoBehaviour
     /// 중지 한 후에도 편집기 장면에 머물러 있는 버그인 유령 객체가 생성됩니다.
     /// 그래서 아래 코드는 우리가 유령 객체를 만들지 않도록 하기 위한 것입니다.
     /// </summary>
-    protected void OnApplicationQuit()
+    protected virtual void OnApplicationQuit()
     {
         // 실행 해제 시 참조를 해제합니다.
         _appIsClosing = true;
