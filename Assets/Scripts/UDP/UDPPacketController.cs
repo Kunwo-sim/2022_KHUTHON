@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 using UniRx;
 
 public enum UDPPacketType
@@ -276,7 +276,10 @@ public class UDPPacketController : Singleton<UDPPacketController>
                 break;
         }
     }
-    
+
+    // 클라에서 받아서 처리하기 위한 스크립트들
+    public Vote vote;
+
     private void ReceiveDebugPacket(int debugValue)
     {
         Debug.Log($"[KHW] UDPPacketController - ReceiveDebugPacket : debugValue => {debugValue}");
@@ -307,6 +310,8 @@ public class UDPPacketController : Singleton<UDPPacketController>
         {
             return;
         }
+
+        vote?.StartVote();
     }
 
     /// <summary>서버는 투표 인덱스를 확인 후 값을 1 증가시킴</summary>
@@ -316,6 +321,8 @@ public class UDPPacketController : Singleton<UDPPacketController>
         {
             return;
         }
+
+        vote?.ChoiceIncrease(answerIndex);
     }
 
     /// <summary>클라이언트는 투표 완료 연출을 보여줌</summary>
@@ -325,6 +332,8 @@ public class UDPPacketController : Singleton<UDPPacketController>
         {
             return;
         }
+
+        vote?.EndVote();
     }
 
     /// <summary>클라이언트는 다음 대사를 보여줌</summary>
@@ -343,6 +352,11 @@ public class UDPPacketController : Singleton<UDPPacketController>
         {
             return;
         }
+
+        if (SceneManager.GetActiveScene().name == "Title")
+        {
+            SceneManager.LoadScene("InGame");
+        }
     }
 
     /// <summary>클라이언트는 게임 화면에 있을 때 Title로 이동</summary>
@@ -351,6 +365,11 @@ public class UDPPacketController : Singleton<UDPPacketController>
         if (programType is ProgramType.Server)
         {
             return;
+        }
+
+        if (SceneManager.GetActiveScene().name == "InGame")
+        {
+            SceneManager.LoadScene("Title");
         }
     }
 
