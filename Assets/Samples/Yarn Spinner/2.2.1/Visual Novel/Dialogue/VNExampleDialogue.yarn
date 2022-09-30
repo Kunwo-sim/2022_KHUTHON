@@ -43,62 +43,6 @@ position: 0,0
 	<<jump Three>>
 -> 선물은 무슨. 템보다는 글로 정성스레 감사 인사를 전한다.
 	<<jump Four>>
-
-// adds actor named "Eve" using sprite "cool-girl", placed in left-half + center of screen, with green text label
-<<Act Eve cool-girl left center green>>
-
-Eve: Finally, a quiet day at the office. Maybe I'll be able to get some work done.
-
-// adds actor "Adam" with sprite "biz-guy" off-screen right, with blue-ish text label
-<<Act Adam biz-guy 1.25 center #226677>>
-
-// animate Adam into new position in right-half + center, within 0.5 seconds
-<<Move Adam right center 0.5>>
-<<PlayAudio music_funny 1.0 loop>>
-
-Adam: Hey Eve! I have a question!
-Eve: Oh no...
-
-// horizontally flips Eve actor to face Adam
-<<Flip Eve>>
-
-// Yarn shortcut choices, an easy way to make branching options
--> Eve gets upset with Adam
-	<<Shake Eve 1.0>>
-	Eve: WHAT DO YOU WANT???
-	Adam: I just wanted to see if you liked using Yarn Spinner.
-	Eve: ... It's fine. Thanks. Now leave me alone.
--> Adam asks Eve a question
-	Adam: Do you think Yarn Spinner is easy to use?
-	Eve: Not when you're bothering me.
-	Adam: Oh, I didn't realize you were busy. Sorry.
-
-// hide Adam actor and remove from the scene
-<<Hide Adam>>
-// Stop all sound playback
-<<StopAudioAll>>
-
-Eve: Ok, now to finally write that visual novel.
-<<Flip Eve>>
-<<PlayAudio music_romantic>>
-Eve: I can finally write my epic romance about -
-<<StopAudioAll>>
-<<Flip Eve>>
-<<wait 1.5>>
-<<Flip Eve>>
-Eve: Wait... where's my laptop? It's not here.
-<<Shake Eve>>
-Eve: Adam! Have you seen my laptop???
-
-<<PlayAudio music_funny>>
-<<Flip Eve>>
-<<Move Eve 1.25 center 1.0>>
-Eve: ADDDDAAAMMMMMMM!!!
-
-// fade to black, from 0% opacity to 100% opacity, in 2.0 seconds
-<<Fade black 0.0 1.0 2.0>>
-THE END.
-
 ===
 
 title: One
@@ -112,16 +56,21 @@ position: 0,0
 <<Act 모카목화 MokHwa_InGame_Smile leftedge offleft white>>
 모카목화: 와! 고마워 오빠!
 모카목화: 나 안 그래도 요즘 마땅한 무기가 없어서 애 먹는 중이었는데! 이거 쓰면 몹 다 때려잡을 수 있을듯?ㅋㅋㅋ
+<<Hide 모카목화>>
 <<Act 모카목화 MokHwa_InGame_Default leftedge offleft white>>
 모카목화: 아, 생각난 김에 나랑 오랜만에 같이 이번에 새로 업데이트 된 던전 갈래?
 모카목화: 어렵다고 소문 났긴 한데 오빠랑 가면 깰 수 있을지도?ㅋㅋㅋ 그러니까 같이 가주라!
 신규 업데이트 된 던전?
 안 그래도 궁금하긴 했다. 먼저 간 길드원들도 혀를 내두르던데... 그래도 목화와 함께라면!
+<<Hide 모카목화>>
+<<Hide 나>>
 -> 함께 신규 던전을 깨러 간다.
+<<Act 나 me rightedge offright white>>
 나: 음... 그래, 그러지 뭐.
 <<Act 모카목화 MokHwa_InGame_Smile leftedge offleft white>>
 모카목화: 앗싸!!! 역시 오빠밖에 없다ㅠ 그럼 지금 바로 가자!
 그렇게 목화와 나는 파티를 맺은 뒤, 잔뜩 사람이 우글거리는 던전의 입구로 향했다.
+<<Hide 모카목화>>
 <<Scene back3>>
 ~20분 뒤~
 "크아악!" "키오오!"
@@ -134,9 +83,10 @@ position: 0,0
 목화는 얼마 남지 않은 HP가 되어 날 부른다. 설상가상으로 꽤 센 잡몹들에게 둘러싸여 있다!
 하지만 문제는 나도 위기라는 것. 지금 상황에서 목화를 살리러 가면 난 보스몹의 공격을 결코 피하지 못한다.
 그렇다고 죽을 것만 같은 목화를 무시하기엔...
+<<Hide 모카목화>>
+<<Hide 나>>
 ...으으, 무슨 행동을 취해야 하지?
 
-<<Hide 모카목화>>
 -> 잽싸게 모카목화를 구한다
 	<<jump OneOne>>
 -> 일단 보스몹을 죽이는 데 집중한다
@@ -151,6 +101,7 @@ position: 0,0
 <<Scene back3>>
 <<Act 모카목화 MokHwa_InGame_Emb leftedge offleft white>>
 (챙-)
+<<Act 나 me rightedge offright white>>
 나: 목화야, 얼른 피해!
 재빨리 목화와 몬스터 사이에 서서 공격을 막아낸다. 그러곤 단칼에 몬스터의 목을 베어낸다.
 고개를 돌려 목화가 무사하다는 사실도 확인한 그때,
@@ -186,11 +137,13 @@ position: 0,0
 어쩌면... 어쩌면... 목화도 나와 같은 마음일지도 모른다.
 몇 달 간, 서로의 등을 지켜주며 함께한 시간들 동안 목화에 대한 마음은 부정할 수 없이 커져왔다.
 어쩌면...! 목화가 나를 잔뜩 동경 어린 눈빛으로 바라보는 지금이 기회일지도 모른다...!
+<<Hide 모카목화>>
 -> 모카목화에게 수줍게 마음을 전한다.
 나: 목화야, 할 말이 있는데...
 나: 사실 너를 처음 본 순간부터 좋아했어. 매일매일 너와 던전을 돌 때마다 가슴이 두근댔고 너만 보이고 너 생각만 나고 몇 달 전부터 계속 너에게 고백하는 생각만 했어. 지금이 가장 적절한 순간인 것 같아서 이야기를 해봐. 이젠 픽셀이 아니라 현실에서 널 만나고 싶다. 그래서 그런데,
 나: 목화야, 나와 사귀어줄래?
 ... 잠시 정적이 흐른다.
+<<Act ??? me rightedge offright white>>
 ???: 오 뭐야
 ???: 고백 터짐?
 ...어?
@@ -209,7 +162,7 @@ position: 0,0
 30초 쯤이 지났을까, 흔들리는 내 눈 앞에 보이는 것은...
 ???: 이제 누가 힐 해주냐
 <<Scene back1>>
-<Ending: 이제 누가 힐 해주냐>
+<Ending 이제 누가 힐 해주냐>
 ===
 
 title: OneTwo
@@ -218,10 +171,12 @@ colorID: 0
 position: 0,0
 ---
 <<Scene back3>>
+<<Act 모카목화 MokHwa_InGame_Emb leftedge offleft white>>
 모카목화: 꺄아악-!!!! 오빠, 나좀 ㄷ-
 나는 목화의 처절한 비명에도 불구하고 그녀를 돕지 못한 채 다가오는 보스몹의 공격만을 막아내는데 전념했다.
 겨우겨우 공격을 쳐내면서 곁눈질로 본 목화의 캐릭터는 이미 쓰러져 있었다. 미안, 목화야...
 하지만 아무래도 계산을 잘못 한 모양이다.
+<<Hide 모카목화>>
 아무리 게임을 잘하는 나라고 해도 힐러 없이는 이런 보스몹을 상대하는 것이 곤란하다.
 보스몹의 체력은 계속해서 다시 차오르고, 차오르고... 반면 나의 체력은 깎이기만 할 뿐.
 ...아무리 좋은 컨트롤이라도 이런 상황 앞에서는 무릎을 꿇을 수밖에 없다.
@@ -235,19 +190,21 @@ position: 0,0
 이렇게 화난 그녀의 모습은 처음이다. 나는 아무 말도 하지 못하고 그저 "목화야..." 라는 말만 반복했다.
 급기야 목화의 마이크에는 그녀가 키보드를 쾅쾅 내려치는 소리까지 잡히기 시작했다.
 모카목화: 그러니까! (쾅) 앞으론! (쾅) 제발! (쾅)
+<<Hide 모카목화>>
 <<Act ??? Netcama leftedge offleft white>>
 ???: 이런 일 있으면! (쾅) 무조건! (쾅) 내...! ... ... ... 
 ???: ...
 잘못 들었나...?
 아무리 다시 들어도 방금 그건 목화의 목소리가 아니라... 걸걸한 남자의 목소리다...
 ???: ... ... ... 에이, 씨. 글렀네,
+<<Hide ???>>
 「모카목화 님께서 게임 접속을 종료하였습니다.」
 ... ... ...
 ...뭐지?
 목화는... 사실 남자였던 걸까...?
 그럴 리가. 아냐, 목화가... 목화는...
 <<Scene back1>>
-<Ending: 넷카마 그녀 >
+<Ending 넷카마 그녀 >
 ===
 
 title: Two
@@ -256,19 +213,21 @@ colorID: 0
 position: 0,0
 ---
 <<Scene back2>>
+<<Act 나 me rightedge offright white>>
 역시 목화에겐 정성을 들인 아이템을 선물하는 것이 더 좋을 것 같다.
 간단한 감사 인사와 함께 선물을 보내자, 마침 접속 중이었는지 목화에게서 바로 답장이 왔다.
 <<Act 모카목화 MokHwa_InGame_Smile leftedge offleft white>>
 모카목화: 와! 고마워 오빠!
 모카목화: 나 안 그래도 요즘 낚시 퀘스트 마저 해야하는데, 역시 반복 퀘스트는 넘 지루해서 못하겠더라ㅋㅋㅋ
 모카목화: 아, 그래서 그런데 생각난 김에 나랑 같이 낚시 퀘스트 같이 가 줄 생각 있어, 오빠?
+<<Hide 모카목화>>
 <<Act 모카목화 MokHwa_InGame_Shy leftedge offleft white>>
 모카목화: 나 혼자 하면 지루하겠지만, 오빠랑 가면 좀 재밌을지도? ㅋㅋㅋ그러니까 같이 가주라ㅠㅠ
 낚시 퀘스트?
 그 퀘스트는 플레이어들 사이에선 시간을 잡아먹기론 악명이 높은 퀘스트였다. 물론, 게임광이다시피 이것만 플레이한 나는 이미 깨버렸지만.
 다시 이 퀘스트를 가라는 건 그 지루함을 견뎌야 한다는 소리와 같았다. 하지만 이걸 같이 가준다면 목화와 더 가까워질 계기가 될 수도...
-<<Scene back3>>
 <<Hide 모카목화>>
+<<Scene back3>>
 ~1시간 뒤~
 역시 메타버스의 발전은 엄청나긴 하다. 온통 폴리곤으로 만들어졌을 잔디와 밤하늘도 전부 진짜 못지 않게 아름답다.
 게임 BGM도 잔잔하니 듣기가 좋아서 폴리곤 강가에 폴리곤 캐릭터로 앉아있음에도 제법 감성이 난다.
@@ -286,6 +245,7 @@ position: 0,0
 혹시 불편한 이야기인가, 싶어 애써 수습을 하려 급하게 덧붙인다. 그러자 얼마 지나지 않아,
 모카목화: 그런게 아냐! 사실은... 음... 그러니까...
 모카목화: ...
+<<Hide 모카목화>>
 <<Act 모카목화 MokHwa_InGame_Shy leftedge offleft white>>
 모카목화: 실은, 오빠. 나 오빠한테 숨기고 있는 게 있어.
 모카목화: 오빠, 이거 얘기해도 화내지 않기다?
@@ -293,6 +253,7 @@ position: 0,0
 나: 그럼, 나 그렇게 속 좁은 사람 아냐.
 모카목화: 그럼... 말할게.
 모카목화: 사실, 나...
+<<Hide 모카목화>>
 <<Act 모카목화 MokHwa_InGame_Smile leftedge offleft white>>
 모카목화: 모카목화는, 당신의 메타버스 AI 친구랍니다!
 모카목화: 아직은 베타테스터 단계에 있지만, 저는 성장 중이랍니다><
@@ -311,6 +272,7 @@ position: 0,0
 「Multiverse AI Friend, Mocha목화! 베타테스터 리뷰...」
 ...이럴 수가, 전부 사실이다. 목화의 사진이 대문짝만하게 찍혀있는 사이트엔 적지만 정말 사람들이 적은 리뷰가 적혀있었다.
 망연자실하게, 그렇지만 반사적으로, 키보드에 손가락을 올린다...
+<<Hide 나>>
 -> 그래도, 함께 한 시간은 즐거웠으니, 사랑했다... 구질구질하지만 따뜻한 리뷰를 남긴다.
 	<<jump TwoOne>>
 -> 이게 뭐야, 이건 사용자 기만이다! 분노에 휩싸여 악플에 가까운 비판적 리뷰를 남긴다.
@@ -323,6 +285,7 @@ colorID: 0
 position: 0,0
 ---
 <<Scene back2>>
+<<Act 나 me rightedge offright white>>
 나:「너와 함께 보낸 모든 시간이 즐거웠어... 사실, 조금은... 아주 조금은 목화 널 사랑했다... 지금은 널 보내주지만, 언젠가는 다시 만날 수 있겠지... 그 때는 픽셀이 아니라 실제로 만났으면 해... 이젠 보내줄게... 즐거웠어...」
 새벽 감성에 젖어 리뷰 글을 작성하는 동안, 나도 모르게 코가 조금 찡한 것 같기도 하다.
 그래도 몇 달 간 동고동락하며 우리가 쌓아온 그 감정은, 설령 목화가 인간에 의해 만들어진 존재라 할지라도 결코 가짜일 수 없다.
@@ -335,11 +298,11 @@ position: 0,0
 그 때의 충격으로 <리그 오브 메이플워치2>도 접고 집에만 박혀 뒹굴거리며 폰만 하던 나.
 「새로운 메일이 도착했습니다.」
 에이, 귀찮게... 하는 생각을 하며 반사적으로 알림을 삭제하려다, 메일의 제목을 보고 멈칫한다.
-<당신의 친구, 목화가 돌아왔어요!>
+<당신의 친구, 목화가 돌아왔어요!\>
 나: 목화...?
 동그란 눈이 되어 메일을 눌러보니, 잔뜩 멀끔해진 목화의 모습과 함께 "모카목화 정식 출시!" 라는 문구가 나를 반겼다.
 <<Act 모카목화 MokHwa_InGame_Default leftedge offleft white>>
-「정식 보이스&채팅 앱으로 돌아온 메타버스 AI 친구, 모카목화! -제가 그리웠나요?」
+모카목화: 「정식 보이스&채팅 앱으로 돌아온 메타버스 AI 친구, 모카목화! -제가 그리웠나요?」
 <<Hide 모카목화>>
 정식 출시라니, 이, 이거라면 목화를 다시 볼 수 있는 걸까?
 홀린 듯이 앱을 다운 받는다.
@@ -350,7 +313,7 @@ position: 0,0
 오랜만이야, 목화야...
 <<Scene back1>>
 <<Hide 모카목화>>
-<Ending: her, 목화>
+<Ending her, 목화>
 ===
 
 title: TwoTwo
@@ -359,6 +322,7 @@ colorID: 0
 position: 0,0
 ---
 <<Scene back2>>
+<<Act 나 me rightedge offright white>>
 나: 「뭐 이런 AI가 다 있음? 사용자 동의는 공중분해 된건가? 게다가 내가 공대생이어서 아는 거지만 이건 구조 자체부터 글러먹었다. 누가 인공지능을 이렇게 만드냐? 리스폰스 타임은 말도 안되게 늦고, 중간중간 엄청난 버그도...」
 경희대 공대생의 실력을 발휘해 그간 이상하다고 생각한 목화의 버그를 잔뜩 써내려간다. 
 이건 이렇게 만들었어야지, 저건 저렇게 뺐어야지. 최대한 개발자의 심기를 건드릴 법한 내용들을 쥐꼬리만큼도 남기지 않고 써내려간다.
@@ -385,7 +349,7 @@ position: 0,0
 이게 무슨 상황이지? 교수님께서 어떻게...?
 교수님: 아, 다름이 아니고 내가 조그맣게 연구 프로젝트를 하고 있는데 말이야.
 교수님: 그 이름이 '메타버스 AI 모카목화'라고 한다네.
-...목화?
+나: ...목화?
 이게 무슨 소린지 제대로 파악하기도 전에, 교수님께서 말씀을 이으신다.
 교수님: 허허, 내가 모카번을 좋아하는 게 연결이 되어서 그렇게 이름이 붙을 줄은 몰랐는데 말이야.
 교수님: 아무튼 자네가 쓴 리뷰글을 아주 잘 읽었어. 우리 프로젝트의 문제점을 아주 날카롭게 잘 지적했더군.
@@ -393,7 +357,7 @@ position: 0,0
 교수님: ...대학원은 생각이 없나?
 <<Hide 교수님>>
 <<Scene back1>>
-<Ending: 대학원생은 뚠뚠 오늘도 뚠뚠>
+<Ending 대학원생은 뚠뚠 오늘도 뚠뚠>
 ===
 
 title: Three
@@ -409,7 +373,7 @@ position: 0,0
 <<Act 모카목화 MokHwa_InGame_Smile leftedge offleft white>>
 모카목화: 와! 고마워 오빠!
 <<Hide 모카목화>>
-<<Act moka MokHwa_InGame_Default leftedge offleft white>>
+<<Act 모카목화 MokHwa_InGame_Default leftedge offleft white>>
 모카목화: 근데 이거 꽤 비싼 옷 아냐? 내가 준 아이템보다도 훨씬 비싼데?
 모카목화: 이러면 내가 선물을 준 의미가 없어지는데!ㅠㅠ
 나: 아냐, 뭘! 이 정도는 금방 벌지ㅋㅋㅋ 마스터급 던전 한두 번만 돌면 되는걸, 뭐.
@@ -470,7 +434,7 @@ position: 0,0
 아냐, 목화야...
 나, 나도 종교 안 믿어...!
 <<Scene back1>>
-<Ending: 도를 믿으십니까?>
+<Ending 도를 믿으십니까?>
 ===
 
 title: Four
@@ -509,5 +473,5 @@ position: 0,0
 아냐! 그건... 그건 내 친구가 한 말인데...!
 나: 안... 안돼... ... ... 오해야...!
 <<Scene back1>>
-<Ending: 뭐야... 인터넷 많이 하는 사람 같아...>
+<Ending 뭐야... 인터넷 많이 하는 사람 같아...>
 ===
