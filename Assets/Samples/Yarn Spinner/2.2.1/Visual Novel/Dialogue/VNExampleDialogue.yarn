@@ -9,15 +9,29 @@ position: 0,0
 // start playing audioclip "ambient_birds" at 50% volume, loop forever
 <<PlayAudio ambient_birds 0.5 loop>>
 
-A VISUAL NOVEL EXAMPLE
-
-A VISUAL NOVEL EXAMPLE_00
-A VISUAL NOVEL EXAMPLE_01
-A VISUAL NOVEL EXAMPLE_02
-A VISUAL NOVEL EXAMPLE_03
-A VISUAL NOVEL EXAMPLE_04
-A VISUAL NOVEL EXAMPLE_05
-A VISUAL NOVEL EXAMPLE_06
+<<Act 나 cool-girl left center green>>
+202n년 n월 n일. 한국엔 메타버스 어드벤처 게임, <리그 오브 메이플워치2>의 열풍이 불고 있다.
+엄청난 규모의 어드벤처 게임, 다른 아바타 캐릭터와의 대화와 상호작용, 인게임 재화를 통해 살 수 있는 아이템까지!
+모든 것이 합쳐진, 누구나 한번쯤은 들어보았을 그 게임은 명성과 인기답게 경희대에도 동아리가 창설되어, 길드까지 만들어져 있으니...
+나 또한 이 길드, <후마니타쓱>에 소속되어 게임을 즐긴지도 어언 몇 달.
+원체 게임을 잘 하던 나였기에 어느새 게임에서도, <후마니타쓱> 길드에서도 입지를 탄탄하게 다져나가고 있다.
+나: 오늘도 던전이나 돌까...
+기지개와 함께 컴퓨터에 앉아 게임을 키자, 띠링- 하고 수신음이 울린다.
+「모카목화 님께서 선물과 메세지를 보내셨습니다.」
+목화다!
+목화는 백마법사 직업의 제법 귀여운 여자 캐릭터이다.
+비슷한 시기에 길드원이 된 우리는 몇 달간 레이드를 돌거나, 수십 시간에 걸쳐 깨야 하는 퀘스트를 함께 하며 많이 가까워졌다.
+언제는 던전 하나를 깨려고 함께 머리를 맞대어 몇날 며칠동안 공략을 분석하고, 언제는 할로윈을 기념해 커플 룩템도 맞췄었다.
+화면 너머로만 만난 그녀이지만, 나는 알 수 있다. 목화와 나는 잘 맞는다는 걸...
+모카목화: 「오빠! 저번에 필요하다 그랬던 거 오다 주웠지롱ㅋㅋㅋ 감사인사는 템으로 받습니다 0.<」
+이럴수가, 내가 필요하다고 노래를 불렀던 퀘스트 아이템이다. 그걸 기억하고 내게 선물해주다니, 게다가 분명 목화도 이게 필요할텐데...
+자꾸만 입꼬리가 올라가는 것을 참을 수 없다. 어쩌면 목화도...
+이럴 때가 아니지, 어서 목화에게 답례와 함께 메세지를 보내야겠다.
+무슨 선물을 주면 목화가 좋아할까?
+-> 어려운 던전을 클리어해야만 얻을 수 있는 레어템 무기
+-> 낚시 퀘스트를 1000번 해야만 얻을 수 있는 장신구
+-> 모카목화에게 잘 어울릴 것 같은 토끼 느낌 코스튬
+-> 선물은 무슨. 템보다는 글로 정성스레 감사 인사를 전한다.
 
 // adds actor named "Eve" using sprite "cool-girl", placed in left-half + center of screen, with green text label
 <<Act Eve cool-girl left center green>>
@@ -73,5 +87,13 @@ Eve: ADDDDAAAMMMMMMM!!!
 // fade to black, from 0% opacity to 100% opacity, in 2.0 seconds
 <<Fade black 0.0 1.0 2.0>>
 THE END.
+
+===
+
+title: One
+tags: 
+colorID: 0
+position: 0,0
+---
 
 ===
