@@ -1,7 +1,7 @@
 title: Start
 tags: 
 colorID: 0
-position: 0,0
+position: -163,-327
 ---
 
 // sets background image to sprite called "bg_office"
@@ -13,21 +13,22 @@ position: 0,0
 엄청난 규모의 어드벤처 게임, 다른 아바타 캐릭터와의 대화와 상호작용, 인게임 재화를 통해 살 수 있는 아이템까지!
 모든 것이 합쳐진, 누구나 한번쯤은 들어보았을 그 게임은 명성과 인기답게 경희대에도 동아리가 창설되어, 길드까지 만들어져 있으니...
 나 또한 이 길드, <후마니타쓱>에 소속되어 게임을 즐긴지도 어언 몇 달.
-원체 게임을 잘 하던 나였기에 어느새 게임에서도, <후마니타쓱> 길드에서도 입지를 탄탄하게 다져나가고 있다.
+원체 게임을 잘 하던 나였기에 어느새 게임에서도, 
+<후마니타쓱> 길드에서도 입지를 탄탄하게 다져나가고 있다.
 
-<<Act 나 cool-girl left center green>>
+<<Act 나 cool-girl leftedge leftedge green>>
 나: 오늘도 던전이나 돌까...
 <<Hide 나>>
 
 기지개와 함께 컴퓨터에 앉아 게임을 키자, 띠링- 하고 수신음이 울린다.
 「모카목화 님께서 선물과 메세지를 보내셨습니다.」
-목화다!
+나: 목화다!
 목화는 백마법사 직업의 제법 귀여운 여자 캐릭터이다.
 비슷한 시기에 길드원이 된 우리는 몇 달간 레이드를 돌거나, 수십 시간에 걸쳐 깨야 하는 퀘스트를 함께 하며 많이 가까워졌다.
 언제는 던전 하나를 깨려고 함께 머리를 맞대어 몇날 며칠동안 공략을 분석하고, 언제는 할로윈을 기념해 커플 룩템도 맞췄었다.
 화면 너머로만 만난 그녀이지만, 나는 알 수 있다. 목화와 나는 잘 맞는다는 걸...
 
-<<Act 모카목화 MokHwa_InGame_Default center center green>>
+<<Act 모카목화 MokHwa_InGame_Default leftedge offleft green>>
 모카목화:「오빠! 저번에 필요하다 그랬던 거 오다 주웠지롱ㅋㅋㅋ 감사인사는 템으로 받습니다 0.<」
 이럴수가, 내가 필요하다고 노래를 불렀던 퀘스트 아이템이다. 그걸 기억하고 내게 선물해주다니, 게다가 분명 목화도 이게 필요할텐데...
 자꾸만 입꼬리가 올라가는 것을 참을 수 없다. 어쩌면 목화도...
@@ -42,68 +43,13 @@ position: 0,0
 -> 모카목화에게 잘 어울릴 것 같은 토끼 느낌 코스튬
 	<<jump Three>>
 -> 선물은 무슨. 템보다는 글로 정성스레 감사 인사를 전한다.
-
-// adds actor named "Eve" using sprite "cool-girl", placed in left-half + center of screen, with green text label
-<<Act Eve cool-girl left center green>>
-
-Eve: Finally, a quiet day at the office. Maybe I'll be able to get some work done.
-
-// adds actor "Adam" with sprite "biz-guy" off-screen right, with blue-ish text label
-<<Act Adam biz-guy 1.25 center #226677>>
-
-// animate Adam into new position in right-half + center, within 0.5 seconds
-<<Move Adam right center 0.5>>
-<<PlayAudio music_funny 1.0 loop>>
-
-Adam: Hey Eve! I have a question!
-Eve: Oh no...
-
-// horizontally flips Eve actor to face Adam
-<<Flip Eve>>
-
-// Yarn shortcut choices, an easy way to make branching options
--> Eve gets upset with Adam
-	<<Shake Eve 1.0>>
-	Eve: WHAT DO YOU WANT???
-	Adam: I just wanted to see if you liked using Yarn Spinner.
-	Eve: ... It's fine. Thanks. Now leave me alone.
--> Adam asks Eve a question
-	Adam: Do you think Yarn Spinner is easy to use?
-	Eve: Not when you're bothering me.
-	Adam: Oh, I didn't realize you were busy. Sorry.
-
-// hide Adam actor and remove from the scene
-<<Hide Adam>>
-// Stop all sound playback
-<<StopAudioAll>>
-
-Eve: Ok, now to finally write that visual novel.
-<<Flip Eve>>
-<<PlayAudio music_romantic>>
-Eve: I can finally write my epic romance about -
-<<StopAudioAll>>
-<<Flip Eve>>
-<<wait 1.5>>
-<<Flip Eve>>
-Eve: Wait... where's my laptop? It's not here.
-<<Shake Eve>>
-Eve: Adam! Have you seen my laptop???
-
-<<PlayAudio music_funny>>
-<<Flip Eve>>
-<<Move Eve 1.25 center 1.0>>
-Eve: ADDDDAAAMMMMMMM!!!
-
-// fade to black, from 0% opacity to 100% opacity, in 2.0 seconds
-<<Fade black 0.0 1.0 2.0>>
-THE END.
-
+	<<jump Four>>
 ===
 
 title: One
 tags: 
 colorID: 0
-position: 0,0
+position: 42,-395
 ---
 역시 목화에겐 희귀한 아이템을 선물하는 것이 더 좋을 것 같다.
 간단한 감사 인사와 함께 선물을 보내자, 마침 접속 중이었는지 목화에게서 바로 답장이 왔다.
@@ -143,7 +89,7 @@ position: 0,0
 title: OneOne
 tags: 
 colorID: 0
-position: 0,0
+position: 239,-456
 ---
 <<Act 모카목화 MokHwa_InGame_Emb center center green>>
 (챙-)
@@ -209,7 +155,7 @@ position: 0,0
 title: OneTwo
 tags: 
 colorID: 0
-position: 0,0
+position: 241,-397
 ---
 모카목화: 꺄아악-!!!! 오빠, 나좀 ㄷ-
 나는 목화의 처절한 비명에도 불구하고 그녀를 돕지 못한 채 다가오는 보스몹의 공격만을 막아내는데 전념했다.
@@ -242,7 +188,7 @@ position: 0,0
 title: Two
 tags: 
 colorID: 0
-position: 0,0
+position: 42,-330
 ---
 역시 목화에겐 정성을 들인 아이템을 선물하는 것이 더 좋을 것 같다.
 간단한 감사 인사와 함께 선물을 보내자, 마침 접속 중이었는지 목화에게서 바로 답장이 왔다.
@@ -299,7 +245,7 @@ position: 0,0
 title: TwoOne
 tags: 
 colorID: 0
-position: 0,0
+position: 240,-330
 ---
 나:「너와 함께 보낸 모든 시간이 즐거웠어... 사실, 조금은... 아주 조금은 목화 널 사랑했다... 지금은 널 보내주지만, 언젠가는 다시 만날 수 있겠지... 그 때는 픽셀이 아니라 실제로 만났으면 해... 이젠 보내줄게... 즐거웠어...」
 새벽 감성에 젖어 리뷰 글을 작성하는 동안, 나도 모르게 코가 조금 찡한 것 같기도 하다.
@@ -329,7 +275,7 @@ position: 0,0
 title: TwoTwo
 tags: 
 colorID: 0
-position: 0,0
+position: 239,-263
 ---
 나: 「뭐 이런 AI가 다 있음? 사용자 동의는 공중분해 된건가? 게다가 내가 공대생이어서 아는 거지만 이건 구조 자체부터 글러먹었다. 누가 인공지능을 이렇게 만드냐? 리스폰스 타임은 말도 안되게 늦고, 중간중간 엄청난 버그도...」
 경희대 공대생의 실력을 발휘해 그간 이상하다고 생각한 목화의 버그를 잔뜩 써내려간다. 
@@ -366,7 +312,7 @@ position: 0,0
 title: Three
 tags: 
 colorID: 0
-position: 0,0
+position: 43,-221
 ---
 역시 목화에게 어울릴 법한, 귀여운 토끼 귀 머리띠와 그에 걸맞는 토끼 슈트를 선물하는 것이 더 좋을 것 같다.
 인기가 있는 룩템인지라 인게임 재화로도 꽤 비싼 아이템이지만, 목화를 위해서라면...
@@ -427,7 +373,7 @@ position: 0,0
 title: Four
 tags: 
 colorID: 0
-position: 0,0
+position: 41,-156
 ---
 역시 값비싼 아이템을 주기보다는 정성이 가득 담긴 편지를 쓰는 것이 마음을 전하기에 더 좋을 것이다.
 그래, 지난 몇 년 간 글쓰기1과 2 수업을 들으며 다져온 글 실력을 뽐낼 시간이다.
