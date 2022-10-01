@@ -357,6 +357,7 @@ position: 0,0
 교수님: ...대학원은 생각이 없나?
 <<Hide 교수님>>
 <<Scene back1>>
+<<Act 엔딩 end22 leftedge 0.7 white>>
 <Ending 대학원생은 뚠뚠 오늘도 뚠뚠>
 ===
 
