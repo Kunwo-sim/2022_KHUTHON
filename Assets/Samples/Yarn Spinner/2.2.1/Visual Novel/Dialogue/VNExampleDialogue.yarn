@@ -7,7 +7,7 @@ position: 0,0
 // sets background image to sprite called "bg_office"
 <<Scene back2>>
 // start playing audioclip "ambient_birds" at 50% volume, loop forever
-<<PlayAudio ambient_birds 0.5 loop>>
+<<PlayAudio MainBG 0.5 loop>>
 
 202n년 n월 n일. 한국엔 메타버스 어드벤처 게임, <리그 오브 메이플워치2>의 열풍이 불고 있다.
 엄청난 규모의 어드벤처 게임, 다른 아바타 캐릭터와의 대화와 상호작용, 인게임 재화를 통해 살 수 있는 아이템까지!
