@@ -162,6 +162,7 @@ position: 0,0
 30초 쯤이 지났을까, 흔들리는 내 눈 앞에 보이는 것은...
 ???: 이제 누가 힐 해주냐
 <<Scene back1>>
+<<Act 엔딩 end11 leftedge 0.7 white>>
 <Ending 이제 누가 힐 해주냐>
 ===
 
@@ -204,6 +205,7 @@ position: 0,0
 목화는... 사실 남자였던 걸까...?
 그럴 리가. 아냐, 목화가... 목화는...
 <<Scene back1>>
+<<Act 엔딩 end12 leftedge 0.7 white>>
 <Ending 넷카마 그녀 >
 ===
 
@@ -313,6 +315,7 @@ position: 0,0
 오랜만이야, 목화야...
 <<Scene back1>>
 <<Hide 모카목화>>
+<<Act 엔딩 end21 leftedge 0.7 white>>
 <Ending her, 목화>
 ===
 
