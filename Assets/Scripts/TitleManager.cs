@@ -15,6 +15,11 @@ public class TitleManager : MonoBehaviour
 
     [SerializeField]
     private Button startButton;
+
+    [SerializeField]
+    private Button collectionButton;
+
+    public GameObject collection;
     
     // private void Start()
     // {
@@ -31,12 +36,23 @@ public class TitleManager : MonoBehaviour
         if (videoPlayer.frame >= 90)
         {
             startButton.gameObject.SetActive(true);
+            collectionButton.gameObject.SetActive(true);
         }
     }
 
     public void GameStartBtnClicked()
     {
         SceneManager.LoadScene("InGame");
+    }
+
+    public void CollectionBtnClicked()
+    {
+        collection.SetActive(true);
+    }
+
+    public void CloseBtnClicked()
+    {
+        collection.SetActive(false);
     }
 
     public void MultiBtnClicked()
@@ -50,15 +66,5 @@ public class TitleManager : MonoBehaviour
             isMulti = true;
         }
         Debug.Log(isMulti);
-    }
-
-    public void ObserveBtnClicked()
-    {
-
-    }
-
-    public void CollectionBtnClicked()
-    {
-
     }
 }
