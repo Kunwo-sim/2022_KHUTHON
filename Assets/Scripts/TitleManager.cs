@@ -2,7 +2,9 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Video;
 using UnityEngine.SceneManagement;
+
 using TMPro;
+using Yarn.Unity;
 
 public class TitleManager : MonoBehaviour
 {
@@ -20,7 +22,7 @@ public class TitleManager : MonoBehaviour
     [SerializeField]
     private Button collectionButton;
 
-    // ÄÃ·º¼Ç
+    // ì»¬ë ‰ì…˜
     public GameObject collection;
     public GameObject[] endingList;
     public Sprite UnlockEndingBG;
@@ -29,11 +31,20 @@ public class TitleManager : MonoBehaviour
 
     private void Start()
     {
-        endingUnLockBtn.onClick.AddListener(() => UnlockEnding(1));
+        // endingUnLockBtn.onClick.AddListener(() => UnlockEnding(1));
+
+        for (int i = 1; i <= 6; i++)
+        {
+            if (PlayerPrefs.GetInt($"UnlockEnding{i}", 0) is 1)
+            {
+                UnlockEnding(i);
+            }
+        }
     }
+
     private void Update()
     {
-        if (videoPlayer.frame >= 90)
+        if (videoPlayer.frame >= 100)
         {
             startButton.gameObject.SetActive(true);
             collectionButton.gameObject.SetActive(true);
@@ -75,24 +86,31 @@ public class TitleManager : MonoBehaviour
         endingBG.sprite = UnlockEndingBG;
 
         string endingText = "";
-        switch(endingNum)
+
+        switch (endingNum)
         {
             case 1:
-                endingText = "Ending 1 : ÀÌ´©°ø ¿£µù (¼öÁı)";
+                endingText = "Ending 1 : ì´ëˆ„ê³µ ì—”ë”© (ìˆ˜ì§‘)";
                 break; 
             case 2:
-                endingText = "Ending 2 : ³İÄ«¸¶ ¿£µù (¼öÁı)";
+                endingText = "Ending 2 : ë„·ì¹´ë§ˆ ì—”ë”© (ìˆ˜ì§‘)";
                 break;
             case 3:
-                endingText = "Ending 3 : her ¿£µù (¼öÁı)";
+                endingText = "Ending 3 : her ì—”ë”© (ìˆ˜ì§‘)";
                 break;
             case 4:
-                endingText = "Ending 4 : ´ëÇĞ¿ø ¿£µù (¼öÁı)";
+                endingText = "Ending 4 : ëŒ€í•™ì› ì—”ë”© (ìˆ˜ì§‘)";
                 break;
-
+            case 5:
+                endingText = "Ending 5 : ë„ë¯¿ë§¨ ì—”ë”© (ìˆ˜ì§‘)";
+                break;
+            case 6:
+                endingText = "Ending 6 : ì‚¬ì´ë²„ë§ë ¹ ì—”ë”© (ìˆ˜ì§‘)";
+                break;
             default:
                 break;
         }
+
         TextMeshProUGUI targetText = targetEnding.GetComponentInChildren<TextMeshProUGUI>();
         targetText.text = endingText;
         targetText.color = Color.black;

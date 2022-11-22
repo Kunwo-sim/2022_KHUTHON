@@ -165,6 +165,7 @@ position: 0,0
 <<Scene back1>>
 <<Act 엔딩 end11 leftedge 0.7 white>>
 <Ending 이제 누가 힐 해주냐>
+<<UnlockEnding 1>>
 ===
 
 title: OneTwo
@@ -208,6 +209,7 @@ position: 0,0
 <<Scene back1>>
 <<Act 엔딩 end12 leftedge 0.7 white>>
 <Ending 넷카마 그녀 >
+<<UnlockEnding 2>>
 ===
 
 title: Two
@@ -318,6 +320,7 @@ position: 0,0
 <<Hide 모카목화>>
 <<Act 엔딩 end21 leftedge 0.7 white>>
 <Ending her, 목화>
+<<UnlockEnding 3>>
 ===
 
 title: TwoTwo
@@ -363,6 +366,7 @@ position: 0,0
 <<Scene back1>>
 <<Act 엔딩 end22 leftedge 0.7 white>>
 <Ending 대학원생은 뚠뚠 오늘도 뚠뚠>
+<<UnlockEnding 4>>
 ===
 
 title: Three
@@ -440,6 +444,7 @@ position: 0,0
 나, 나도 종교 안 믿어...!
 <<Scene back1>>
 <Ending 도를 믿으십니까?>
+<<UnlockEnding 5>>
 ===
 
 title: Four
@@ -479,4 +484,5 @@ position: 0,0
 나: 안... 안돼... ... ... 오해야...!
 <<Scene back1>>
 <Ending 뭐야... 인터넷 많이 하는 사람 같아...>
+<<UnlockEnding 6>>
 ===
