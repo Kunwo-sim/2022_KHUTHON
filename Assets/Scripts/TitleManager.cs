@@ -128,6 +128,11 @@ public class TitleManager : MonoBehaviour
 
     public void OpenCollection(int endingNum)
     {
+        if (PlayerPrefs.GetInt($"UnlockEnding{endingNum}", 0) is not 1)
+        {
+            return;
+        }
+
         collectionPanel.SetActive(true);
         collectionDisplayImage.sprite = endingCutScenes[endingNum - 1];
     }
