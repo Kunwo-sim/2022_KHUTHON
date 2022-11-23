@@ -1,10 +1,10 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Video;
 using UnityEngine.SceneManagement;
 
 using TMPro;
-using Yarn.Unity;
 
 public class TitleManager : MonoBehaviour
 {
@@ -27,7 +27,10 @@ public class TitleManager : MonoBehaviour
     public GameObject[] endingList;
     public Sprite UnlockEndingBG;
 
-    public Button endingUnLockBtn;
+    [SerializeField] private List<Sprite> endingCutScenes;
+
+    [SerializeField] private GameObject collectionPanel;
+    [SerializeField] private Image collectionDisplayImage;
 
     private void Start()
     {
@@ -48,6 +51,12 @@ public class TitleManager : MonoBehaviour
         {
             startButton.gameObject.SetActive(true);
             collectionButton.gameObject.SetActive(true);
+        }
+
+        if (Input.GetKeyDown(KeyCode.F12))
+        {
+            PlayerPrefs.DeleteAll();
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name, LoadSceneMode.Single);
         }
     }
 
@@ -76,6 +85,7 @@ public class TitleManager : MonoBehaviour
         {
             isMulti = true;
         }
+
         Debug.Log(isMulti);
     }
 
@@ -114,5 +124,11 @@ public class TitleManager : MonoBehaviour
         TextMeshProUGUI targetText = targetEnding.GetComponentInChildren<TextMeshProUGUI>();
         targetText.text = endingText;
         targetText.color = Color.black;
+    }
+
+    public void OpenCollection(int endingNum)
+    {
+        collectionPanel.SetActive(true);
+        collectionDisplayImage.sprite = endingCutScenes[endingNum - 1];
     }
 }
