@@ -251,7 +251,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6167349947878513351, guid: 9e0841b82a4ebcd438730d23886e17e6, type: 3}
       propertyPath: loadSprites.Array.size
-      value: 23
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 6167349947878513351, guid: 9e0841b82a4ebcd438730d23886e17e6, type: 3}
       propertyPath: loadAudio.Array.data[3]
@@ -317,6 +317,14 @@ PrefabInstance:
       propertyPath: loadSprites.Array.data[22]
       value: 
       objectReference: {fileID: 21300000, guid: f09a7e9807cbc2249b732618b6afc249, type: 3}
+    - target: {fileID: 6167349947878513351, guid: 9e0841b82a4ebcd438730d23886e17e6, type: 3}
+      propertyPath: loadSprites.Array.data[23]
+      value: 
+      objectReference: {fileID: 21300000, guid: 6768a003e3389d74ab2ff7a2df94363d, type: 3}
+    - target: {fileID: 6167349947878513351, guid: 9e0841b82a4ebcd438730d23886e17e6, type: 3}
+      propertyPath: loadSprites.Array.data[24]
+      value: 
+      objectReference: {fileID: 21300000, guid: 60655cb9ea3ed1b4291b0954b248267c, type: 3}
     - target: {fileID: 9184206409336196516, guid: 9e0841b82a4ebcd438730d23886e17e6, type: 3}
       propertyPath: m_fontSize
       value: 72
@@ -900,6 +908,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 953872268, guid: 3c997b8d15eb17b45bd970151f7b387c, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 955055625, guid: 3c997b8d15eb17b45bd970151f7b387c, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5867338377685092065, guid: 3c997b8d15eb17b45bd970151f7b387c, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 350

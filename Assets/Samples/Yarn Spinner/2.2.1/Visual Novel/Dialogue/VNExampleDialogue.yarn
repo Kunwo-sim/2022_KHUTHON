@@ -443,6 +443,7 @@ position: 0,0
 아냐, 목화야...
 나, 나도 종교 안 믿어...!
 <<Scene back1>>
+<<Act 엔딩 end3 leftedge 0.7 white>>
 <Ending 도를 믿으십니까?>
 <<UnlockEnding 5>>
 ===
@@ -483,6 +484,7 @@ position: 0,0
 아냐! 그건... 그건 내 친구가 한 말인데...!
 나: 안... 안돼... ... ... 오해야...!
 <<Scene back1>>
+<<Act 엔딩 end4 leftedge 0.7 white>>
 <Ending 뭐야... 인터넷 많이 하는 사람 같아...>
 <<UnlockEnding 6>>
 ===
